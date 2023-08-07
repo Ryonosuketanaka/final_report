@@ -24,7 +24,7 @@ def pca(D):
 
 def pca_score(D):
     w, v = pca(D)
-
+    
     m = np.array(np.mean(D, axis=0))
     s = np.std(D, axis=0, ddof=1)
     D_norm = (D - m) / s
