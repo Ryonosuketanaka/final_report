@@ -34,6 +34,17 @@ def pca_score(D):
     return z, w
 
 
+def pca_select(w):
+    c_nume = np.sum(w)  # 累積寄与率の分子
+    c_deno = 0  # 累積寄与率の分子
+    c = c_nume / c_deno
+    j = -1
 
+    while c < 0.8 and j < np.size(w):  # 累積寄与率の基準を0.8
+        j += 1
+        c_deno += w[j]
+        c = c_nume / c_deno
+
+    return j
 
 
