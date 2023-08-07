@@ -25,7 +25,6 @@ if __name__ == "__main__":
     A = pd.read_csv("lec04_data_nagoya.csv", header=0, sep=",", encoding="shif\
 t_jis")  # データファイル読み込み
     D = np.array(A, dtype="float")
-    print(D)
     fn = r"lec04_data_sample_name_sjis.txt"
     sample_name_list = loadText(fn)  # 項目名のファイル読み込み
 
